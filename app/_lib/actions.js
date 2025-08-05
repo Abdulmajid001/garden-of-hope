@@ -112,8 +112,8 @@ export async function createReservationHall(formData) {
 }
 
 export async function createMessage(formData) {
-    const session = await auth();
-    if (!session) throw new Error("You must be logged in to update your profile.");
+    // const session = await auth();
+    // if (!session) throw new Error("You must be logged in to update your profile.");
 
     const newMessage = {
         name: formData.get("name"),
