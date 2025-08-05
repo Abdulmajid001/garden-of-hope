@@ -4,10 +4,10 @@ import {HeadingMainGreen} from "../_components/HeadingMain";
 
 
 const images = [
-    "/rooms/Exclusive-room.jpg",
-    "/rooms/Deluxe-room.jpg",
-    "/rooms/Superior-room.jpg",
-    "/rooms/Premium-room.jpg",
+    "/Exclusive-room.jpg",
+    "/Deluxe-room.jpg",
+    "/Superior-room.jpg",
+    "/Premium-room.jpg",
   ];
   
   const transformStyles = [

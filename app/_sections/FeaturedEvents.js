@@ -3,10 +3,10 @@ import { Button } from "../_components/ButtonCta";
 import {HeadingMainGold} from "../_components/HeadingMain";
 
 const images = [
-    "/halls/Royal-hall.jpg",
-    "/halls/Platinum-Hall.jpg",
-    "/halls/Emerald-ballroom-hall.jpg",
-    "/halls/Skyline-Terrace-hall.jpg",
+    "/Royal-hall.jpg",
+    "/Platinum-Hall.jpg",
+    "/Emerald-ballroom-hall.jpg",
+    "/Skyline-Terrace-hall.jpg",
   ];
   
   const transformStyles = [
