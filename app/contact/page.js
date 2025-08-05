@@ -28,7 +28,7 @@ export default function Page() {
           <div>
             <p className="font-semibold">Office :</p>
             <p>
-              15B Admiralty Way, Victoria Island,<br />
+              15B Admiralty Way, Hope Island,<br />
               Lagos, Nigeria
             </p>
           </div>
