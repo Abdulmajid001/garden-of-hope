@@ -21,7 +21,7 @@ export default async function Page({ params }) {
 
   const { id, maxCapacity, hallName, price, image, description } = hall;
   return (
-    <div className="max-w-[130rem] mx-auto py-[9.6rem] px-[4.6rem]">
+    <div className="max-w-[130rem] mx-auto py-[9.6rem] px-[2rem] sm:px-[4.6rem]">
       {/* Hero Image */}
       <div className="relative max-w-[90rem] aspect-video mx-auto">
         <Image
