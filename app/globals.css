@@ -14,9 +14,9 @@
 
 
 
-*:focus{
+/* *:focus{
   outline: 3px solid var(--color-gold-light);
-}
+} */
 
 html{
   /* font-size: 62.5%; */
