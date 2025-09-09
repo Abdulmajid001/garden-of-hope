@@ -26,7 +26,7 @@ function Header ({session}) {
   return (
     <header
       className={`fixed top-0 left-0  px-[2rem] sm:px-[4.8rem] flex justify-between items-center w-full z-50 transition-all duration-300 ${
-        scrolled ? 'shadow-lg h-[6rem] backdrop-blur-lg text-gold-dark' : 'h-[8rem] bg-green-light text-gold-lighter '
+        scrolled ? 'shadow-lg h-[4.5rem] md:h-[6rem] backdrop-blur-lg text-gold-dark' : 'h-[6rem] md:h-[8rem] bg-green-light text-gold-lighter '
       }`} >
         <Link href="/">
           <img  className="h-[5rem] md:h-[6rem] mx-auto py-2" src="/logo.png" alt="Garden of hope logo" />
