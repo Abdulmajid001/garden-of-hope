@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Page() {
   return (
-    <div className="max-w-[130rem] p-[4rem] lg:p-[9.6rem] text-2xl lg:text-3xl mx-auto">
+    <div className="max-w-[130rem] p-[4rem] py-[9.6rem] text-2xl lg:text-3xl mx-auto">
       <div className="max-w-6xl mx-auto text-gold-dark">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 border-b pb-3">About Us</h1>
 
