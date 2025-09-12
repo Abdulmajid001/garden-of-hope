@@ -7,7 +7,7 @@ export const metadata ={
 
 export default function Page() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 max-w-[130rem] px-[2rem] md:px-[9.6rem] py-[9.6rem] text-2xl lg:text-3xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 max-w-[130rem] px-[2rem] md:px-[9.6rem] md:py-[9.6rem] text-2xl lg:text-3xl mx-auto">
       {/* Left Panel */}
       <div className="flex flex-col justify-center pt-12 space-y-6 text-gold-dark mb-6
       ">
