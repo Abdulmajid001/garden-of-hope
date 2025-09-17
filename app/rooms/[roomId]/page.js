@@ -42,7 +42,7 @@ export default async function Page({ params }) {
       </div>
 
       {/* Content Section */}
-      <div className="max-w-[90rem] mx-auto px-6 py-16 text-gold-dark">
+      <div className="max-w-[90rem] mx-auto px-2 py-16 text-gold-dark">
         {/* Title */}
         <h1 className="text-3xl sm:text-6xl font-semibold mb-12">{roomClass.toUpperCase()}-{name}</h1>
         <p className="mb-8 text-xl sm:text-2xl md:text-3xl">{description}</p>
