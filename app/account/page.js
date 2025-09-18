@@ -20,7 +20,7 @@ async function Page() {
   const roomReservation = await getReservations(session?.user?.email); 
   
   return (
-    <div className="max-w-[130rem] mx-auto py-[9.6rem] pt-[15rem] px-[2rem] sm:px-[4.6rem]">
+    <div className="max-w-[130rem] mx-auto py-[9.6rem] px-[2rem] sm:px-[4.6rem]">
       <div className="text-gold-dark max-w-[80rem] mx-auto align-center">
         <div className="flex gap-8 md:gap-10 items-center text-gold-dark">
           <img src={session?.user?.image} alt="user.s avatar" className="w-25 h-25 sm:w-30 sm:h-30 rounded-full" referrerPolicy="no-referrer"/>
