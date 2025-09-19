@@ -23,9 +23,9 @@ async function Page() {
     <div className="max-w-[130rem] mx-auto py-[9.6rem] px-[2rem] sm:px-[4.6rem]">
       <div className="text-gold-dark max-w-[80rem] mx-auto align-center">
         <div className="flex gap-8 md:gap-10 items-center text-gold-dark">
-          <img src={session?.user?.image} alt="user.s avatar" className="w-25 h-25 sm:w-30 sm:h-30 rounded-full" referrerPolicy="no-referrer"/>
+          <img src={session?.user?.image} alt="user.s avatar" className="w-20 h-20 sm:w-30 sm:h-30 rounded-full" referrerPolicy="no-referrer"/>
           <div className="flex flex-col gap-5 ">
-            <h2 className="font-bold text-3xl sm:text-4xl">Welcome, {firstName}</h2>
+            <h2 className="font-bold text-2xl sm:text-3xl me:text-4xl">Welcome, {firstName}</h2>
             <div className="flex gap-2 items-center ">
               <HiOutlineEnvelope  className="text-3xl"/>
               <p className="font-xl sm:text-2xl">{session?.user?.email}</p>
