@@ -3,7 +3,6 @@ import {HeadingMainGreen} from '../_components/HeadingMain';
 import Loader from '../_components/Loader';
 import RoomList from '../_components/RoomList';
 
-
 export const metadata ={
   title:'Rooms'
 };
@@ -18,6 +17,3 @@ const Page = () => (
 );
 
 export default Page;
-
-// Cache this page for 60 seconds
-export const revalidate = 60
