@@ -19,3 +19,6 @@ const Page = () => (
 );
 
 export default Page;
+
+// Cache this page for 60 seconds
+export const revalidate = 60
