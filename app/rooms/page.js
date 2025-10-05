@@ -3,7 +3,6 @@ import {HeadingMainGreen} from '../_components/HeadingMain';
 import Loader from '../_components/Loader';
 import RoomList from '../_components/RoomList';
 
-export const revalidate = 60;
 
 export const metadata ={
   title:'Rooms'
