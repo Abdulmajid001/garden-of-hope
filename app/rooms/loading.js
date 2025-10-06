@@ -6,4 +6,4 @@ function LoaderComp() {
   </div>
 }
 
-// export default LoaderComp
+export default LoaderComp
