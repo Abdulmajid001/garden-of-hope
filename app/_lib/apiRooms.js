@@ -31,7 +31,7 @@ export async function getRoom(id) {
 //// to test caching
 
 // Cached globally with revalidation
-export const getRevalidatedRoom = unstable_cache(
+export const getCachedRooms = unstable_cache(
   async (id) => await getRooms(),
   ['room'],
   { revalidate: 60 } // cache for 60 seconds
