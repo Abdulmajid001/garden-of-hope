@@ -1,4 +1,4 @@
-import { getRoom } from "@/app/_lib/apiRooms";
+import { getCachedRoom } from "@/app/_lib/apiRooms";
 import Image from "next/image";
 import { HiWifi, HiOutlineClock, HiOutlineSparkles } from "react-icons/hi";
 import { FaParking, FaUtensils, FaSpa, FaBath, FaBed } from "react-icons/fa";
@@ -6,7 +6,7 @@ import ReserveRoomComp from "@/app/_components/ReserveRoomComp";
 
 export async function generateMetadata({ params }) {
   const { roomId } = await params;
-  const room = await getRoom(roomId);
+  const room = await getCachedRoom(roomId);
   return {
     title: `Room ${room.name}`,
   };
@@ -14,7 +14,8 @@ export async function generateMetadata({ params }) {
 
 export default async function Page({ params }) {
   const { roomId } = await params;
-  const room = await getRoom(roomId);
+  // const room = await getRoom(roomId);
+  const room = await getCachedRoom(roomId); // change to getRevalidatedRoom() to test caching
 
   const { name, maxCapacity, roomClass, image, description, imgArray } = room;
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getHall } from "@/app/_lib/apiHalls";
+import {  getCachedHall } from "@/app/_lib/apiHalls";
 import { HiMapPin, HiUsers, HiOutlineEyeSlash, HiGiftTop, HiFilm } from "react-icons/hi2";
 import { FaCouch, FaToiletPaperSlash, FaGlassCheers, FaShieldAlt } from "react-icons/fa";
 import ReserveHallComp from "@/app/_components/ReserveHallComp";
@@ -7,7 +7,8 @@ import { auth } from "@/app/_lib/auth";
 
 export async function generateMetadata({ params }) {
   const { hallId } = await params;
-  const hall = await getHall(hallId);
+  // const hall = await getHall(hallId);
+  const hall = await getCachedHall(hallId);
   return {
     title: hall.hallName,
   };
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Page({ params }) {
   const { hallId } = await params;
-  const hall = await getHall(hallId);
+  const hall = await getCachedHall(hallId);
   const session = await auth();
 
   const { id, maxCapacity, hallName, price, image, description } = hall;

@@ -1,4 +1,5 @@
 import { supabase } from "./supabase";
+import { unstable_cache } from 'next/cache';
 
 export const getHalls = async function () {
   const { data, error } = await supabase
@@ -26,3 +27,16 @@ export async function getHall(id) {
 
   return data;
 }
+
+// Cached globally with revalidation
+export const getCachedHalls = unstable_cache(
+  async () => await getHalls(),
+  ['halls'],
+  { revalidate: 60 } // cache for 60 seconds
+)
+
+export const getCachedHall = unstable_cache(
+  async (id) => await getHall(id),
+  ['hall'],
+  { revalidate: 60 } // cache for 60 seconds
+)
