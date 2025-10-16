@@ -1,6 +1,6 @@
 import React from 'react'
 import RoomCard from './RoomCard';
-import { getRooms, getCachedRooms } from '../_lib/apiRooms';
+import { getCachedRooms } from '../_lib/apiRooms';
 
 async function RoomList() {
     // const rooms = await getRooms();

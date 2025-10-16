@@ -5,8 +5,9 @@ import { deleteHallReservationSB, deleteReservationSB, getHallReservations, getR
 import { supabase } from "./supabase";
 import { redirect } from "next/navigation";
 
-export async function signInAction (){
-    await signIn("google", { redirectTo: '/account' });
+export async function signInAction (pathName){
+    // await signIn("google", { redirectTo: '/account' });
+    await signIn("google", { redirectTo: pathName });
 }
 
 export async function signOutAction () {
