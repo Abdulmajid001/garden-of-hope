@@ -9,7 +9,7 @@ export const metadata ={
 
 const Page = () => (
   <div className='max-w-[130rem] mx-auto py-[9.6rem] px-[2rem] md:px-[4.6rem]'>
-    <PageHeading heading="Discover Comfort & Serenity in Every Room" description="Unwind in thoughtfully designed spaces that blend natural beauty, modern elegance, and warm hospitality. Each of our rooms offers a unique sanctuary where comfort meets charm—complete with lush garden views, soothing décor, and all the amenities you need for a truly rejuvenating stay at Garden of Hope Hotel." />
+    <PageHeading heading="Discover Comfort & Serenity in Every Room" description="Find your calm at Garden of Hope Hotel. Each room blends natural beauty, modern comfort, and warm hospitality, offering a peaceful retreat with garden views and thoughtful touches." />
     <Suspense fallback={<Loader />}>
       <RoomList />
     </Suspense>

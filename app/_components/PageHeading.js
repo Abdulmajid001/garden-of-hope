@@ -1,5 +1,3 @@
-import React from 'react'
-
 function PageHeading({ heading, description }) {
   return (
     <div className="flex flex-col gap-8 mb-[4rem]">
