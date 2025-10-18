@@ -4,7 +4,6 @@ import { signInAction } from "../_lib/actions";
 
 function LoginMessage() {
   const pathName = usePathname();
-  // console.log("Current path:", pathName); 
 
   return (
     <form action={() => signInAction(pathName)} className="w-full">  

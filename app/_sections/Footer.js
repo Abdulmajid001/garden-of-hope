@@ -24,9 +24,12 @@ export default function Footer() {
                </li> 
               </ul>
             <div className='border-t border-white pt-[2rem] flex flex-col text-center md:text-left gap-[1rem] text-[#999] leading-[1]'>
-              {/* <p>&copy; {new Date().getFullYear()} Garden Of Hope. All right reserved.</p> */}
-              <p>&copy; 2025 Garden Of Hope. All right reserved.</p>
-              <p>Designed and Developed by <a className="text-white no-underline transition-all duration-300 hover:text-colorPrimary" href="#">Abdulmajid Hope</a></p>
+              {/* <p>&copy; 2025 Garden Of Hope. All right reserved.</p> */}
+              <p>&copy; {new Date().getFullYear()} Garden Of Hope. All right reserved.</p>
+              <p>
+                Designed and Developed by
+                <a className="text-white no-underline transition-all duration-300 hover:text-colorPrimary" href="https://abdulmajid-hope.vercel.app/" target="_blank" rel="noopener noreferrer">Abdulmajid Hope</a>
+              </p>
             </div>
           </div>
         </section>
