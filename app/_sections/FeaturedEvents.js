@@ -32,7 +32,7 @@ function FeaturedRooms() {
           enableHover={true}
         />
         <div className="mt-[10rem]">
-          <Button href="/rooms" className="mt-8">View Our Spaces</Button>
+          <Button href="/halls" className="mt-8">View Our Spaces</Button>
         </div>
     </section>
   )
