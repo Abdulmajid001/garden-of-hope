@@ -1,4 +1,4 @@
-import { signInAction } from "@/app/_lib/actions";
+import { signInActionAcc } from "@/app/_lib/actions";
 import Image from "next/image";
 import SignInAndOutButton from "../_components/SignInAndOutButton";
 
@@ -23,7 +23,7 @@ export default function Page() {
           Sign in to Garden Of Hope using your Google account
         </p>
         <SignInAndOutButton
-          action={() => signInAction("/account")}
+          action={signInActionAcc()}
           label="Continue with Google"
         />
       </div>

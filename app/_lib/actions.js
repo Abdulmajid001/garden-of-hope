@@ -14,6 +14,9 @@ export async function signInAction(pathName) {
   //   await signIn("google", { redirectTo: "/account" });
   await signIn("google", { redirectTo: pathName });
 }
+export async function signInActionAcc() {
+  await signIn("google", { redirectTo: "/account" });
+}
 
 export async function signOutAction() {
   await signOut({ redirectTo: "/" });
