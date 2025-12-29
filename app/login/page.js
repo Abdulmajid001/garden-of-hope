@@ -23,7 +23,7 @@ export default function Page() {
           Sign in to Garden Of Hope using your Google account
         </p>
         <SignInAndOutButton
-          action={signInActionAcc()}
+          action={signInActionAcc}
           label="Continue with Google"
         />
       </div>
