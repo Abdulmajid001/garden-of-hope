@@ -50,7 +50,7 @@ export const configureAssistant = (voice,style) => {
   const vapiAssistant = {
     name: "Garden of Hope Assistant",
     firstMessage:
-      "Hello and welcome to Garden of Hope, Lagos. Just a heads up, this call will last about 30 seconds, so let me know quickly how I can help, whether it's a room, a hall, or general info.",
+      "Hello and welcome to Garden of Hope. Just a heads up, this call will last about 30 seconds, so let me know quickly how I can help, whether it's a room, a hall, or general info.",
     maxDurationSeconds: 30,
     transcriber: {
       provider: "deepgram",
