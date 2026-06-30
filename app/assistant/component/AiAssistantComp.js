@@ -99,9 +99,8 @@ const AiAssistantComp = () => {
   const latestMessage = messages[messages.length - 1];
 
   return (
-    <section className="min-h-screen w-full flex items-center justify-center px-4 py-10 sm:py-16">
+    <section className=" w-full flex items-center justify-center px-4">
       <div className="relative w-full max-w-2xl mx-auto flex flex-col items-center">
-
         {/* Background glow */}
         <div className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-[var(--color-green-dark)]/10 blur-3xl" />
 
@@ -114,17 +113,17 @@ const AiAssistantComp = () => {
             <span
               className={`w-4 h-4 rounded-full ${
                 callStatus === CallStatus.ACTIVE
-                  ? 'bg-[var(--color-green-dark)] animate-pulse'
+                  ? "bg-[var(--color-green-dark)] animate-pulse"
                   : callStatus === CallStatus.CONNECTING
-                  ? 'bg-yellow-600 animate-pulse'
-                  : 'bg-gold-dark'
+                    ? "bg-yellow-600 animate-pulse"
+                    : "bg-gold-dark"
               }`}
             />
             {callStatus === CallStatus.ACTIVE
-              ? 'Online'
+              ? "Online"
               : callStatus === CallStatus.CONNECTING
-              ? 'Connecting'
-              : 'Offline'}
+                ? "Connecting"
+                : "Offline"}
           </span>
         </div>
 
@@ -132,21 +131,22 @@ const AiAssistantComp = () => {
         <div className="relative z-10 size-[180px] sm:size-[260px] md:size-[300px] flex items-center justify-center rounded-full mb-8 sm:mb-10 shrink-0">
           <div
             className={`absolute inset-0 rounded-full bg-gradient-to-br from-[var(--color-green-dark)]/25 via-[var(--color-green-light)]/20 to-[var(--color-gold-dark)]/25 blur-2xl transition-opacity duration-700 ${
-              callStatus === CallStatus.ACTIVE ? 'opacity-100' : 'opacity-40'
+              callStatus === CallStatus.ACTIVE ? "opacity-100" : "opacity-40"
             }`}
           />
           <div
             className={`absolute inset-0 flex items-center justify-center rounded-full border border-[var(--color-green-dark)]/20 bg-white/20 backdrop-blur-sm transition-opacity duration-700 ${
-              callStatus === CallStatus.FINISHED || callStatus === CallStatus.INACTIVE
-                ? 'opacity-100'
-                : 'opacity-0'
-            } ${callStatus === CallStatus.CONNECTING ? 'opacity-100 animate-pulse' : ''}`}
+              callStatus === CallStatus.FINISHED ||
+              callStatus === CallStatus.INACTIVE
+                ? "opacity-100"
+                : "opacity-0"
+            } ${callStatus === CallStatus.CONNECTING ? "opacity-100 animate-pulse" : ""}`}
           >
             <RiRobot3Line className="text-[5rem] sm:text-[8rem] md:text-[9rem] text-[var(--color-green-dark)]" />
           </div>
           <div
             className={`absolute inset-0 flex items-center justify-center transition-opacity duration-700 ${
-              callStatus === CallStatus.ACTIVE ? 'opacity-100' : 'opacity-0'
+              callStatus === CallStatus.ACTIVE ? "opacity-100" : "opacity-0"
             }`}
           >
             <Lottie
@@ -177,11 +177,11 @@ const AiAssistantComp = () => {
           <button
             onClick={toggleMicrophone}
             disabled={callStatus !== CallStatus.ACTIVE}
-            aria-label={isMuted ? 'Turn on microphone' : 'Turn off microphone'}
+            aria-label={isMuted ? "Turn on microphone" : "Turn off microphone"}
             className="flex items-center justify-center size-12 sm:size-14 rounded-full bg-white/40 border border-[var(--color-green-dark)]/20 text-[var(--color-green-dark)] hover:bg-white/60 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
           >
             <Image
-              src={isMuted ? '/icons/mic-off.svg' : '/icons/mic-on.svg'}
+              src={isMuted ? "/icons/mic-off.svg" : "/icons/mic-on.svg"}
               alt="mic"
               width={20}
               height={20}
@@ -190,14 +190,18 @@ const AiAssistantComp = () => {
 
           {/* Main call button */}
           <button
-            onClick={callStatus === CallStatus.ACTIVE ? handleDisconnect : handleCall}
+            onClick={
+              callStatus === CallStatus.ACTIVE ? handleDisconnect : handleCall
+            }
             disabled={callStatus === CallStatus.CONNECTING}
-            aria-label={callStatus === CallStatus.ACTIVE ? 'End session' : 'Start session'}
+            aria-label={
+              callStatus === CallStatus.ACTIVE ? "End session" : "Start session"
+            }
             className={`relative flex items-center justify-center size-16 sm:size-20 rounded-full transition-all duration-300 shadow-lg ${
               callStatus === CallStatus.ACTIVE
-                ? 'bg-red-700 hover:bg-red-800 shadow-red-700/30'
-                : 'bg-[var(--color-green-dark)] hover:bg-[var(--color-green-light)] shadow-[var(--color-green-dark)]/30'
-            } ${callStatus === CallStatus.CONNECTING ? 'animate-pulse cursor-wait' : 'cursor-pointer'}`}
+                ? "bg-red-700 hover:bg-red-800 shadow-red-700/30"
+                : "bg-[var(--color-green-dark)] hover:bg-[var(--color-green-light)] shadow-[var(--color-green-dark)]/30"
+            } ${callStatus === CallStatus.CONNECTING ? "animate-pulse cursor-wait" : "cursor-pointer"}`}
           >
             {callStatus === CallStatus.ACTIVE && (
               <span className="absolute inset-0 rounded-full ring-2 ring-red-600/40 animate-ping" />
@@ -227,11 +231,19 @@ const AiAssistantComp = () => {
           {/* End / close button */}
           <button
             onClick={handleDisconnect}
-            disabled={callStatus !== CallStatus.ACTIVE && callStatus !== CallStatus.CONNECTING}
+            disabled={
+              callStatus !== CallStatus.ACTIVE &&
+              callStatus !== CallStatus.CONNECTING
+            }
             aria-label="End session"
             className="flex items-center justify-center size-12 sm:size-14 rounded-full bg-white/40 border border-[var(--color-green-dark)]/20 text-[var(--color-green-dark)] hover:bg-white/60 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="size-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="size-5"
+            >
               <path
                 d="M6 6l12 12M18 6L6 18"
                 stroke="currentColor"
@@ -245,68 +257,74 @@ const AiAssistantComp = () => {
         {/* Status label */}
         <p className="relative z-10 text-xl sm:text-2xl text-[var(--color-gray)] mb-8 shrink-0">
           {callStatus === CallStatus.ACTIVE
-            ? 'End Session'
+            ? "End Session"
             : callStatus === CallStatus.CONNECTING
-            ? 'Connecting…'
-            : 'Start Session'}
+              ? "Connecting…"
+              : "Start Session"}
         </p>
 
         {/* Transcript — always mounted at fixed height to prevent layout shift */}
-        <section className={`relative z-10 w-full rounded-2xl bg-white/30 border border-[var(--color-green-dark)]/15 overflow-hidden shrink-0`}>
-          <div className="px-5 py-3 border-b border-[var(--color-green-dark)]/15 flex items-center justify-between">
-            <p className="text-xs sm:text-sm font-semibold text-[var(--color-green-dark)] tracking-wide uppercase">
-              Transcript
-            </p>
-            <span className="text-[10px] sm:text-xs text-[var(--color-gray)]">
-              {messages.length} message{messages.length !== 1 ? 's' : ''}
-            </span>
-          </div>
+        {messages.length > 0 && (
+          <section
+            className={`relative z-10 w-full rounded-2xl bg-white/30 border border-[var(--color-green-dark)]/15 overflow-hidden shrink-0`}
+          >
+            <div className="px-5 py-3 border-b border-[var(--color-green-dark)]/15 flex items-center justify-between">
+              <p className="text-xs sm:text-sm font-semibold text-[var(--color-green-dark)] tracking-wide uppercase">
+                Transcript
+              </p>
+              <span className="text-[10px] sm:text-xs text-[var(--color-gray)]">
+                {messages.length} message{messages.length !== 1 ? "s" : ""}
+              </span>
+            </div>
 
-          <div className="h-72 sm:h-80 overflow-y-auto no-scrollbar px-4 sm:px-5 py-4 space-y-3">
-            {messages.length === 0 ? (
-              <div className="h-full flex items-center justify-center">
-                <p className="text-xs sm:text-sm text-[var(--color-gray)]">
-                  Your conversation will appear here
-                </p>
-              </div>
-            ) : (
-              <>
-                {messages.map((message, index) => {
-                  const isAssistant = message.role === 'assistant';
-                  return (
-                    <div
-                      key={index}
-                      className={`flex ${isAssistant ? 'justify-start' : 'justify-end'}`}
-                    >
+            <div className="h-72 sm:h-80 overflow-y-auto no-scrollbar px-4 sm:px-5 py-4 space-y-3">
+              {messages.length === 0 ? (
+                <div className="h-full flex items-center justify-center">
+                  <p className="text-xs sm:text-sm text-[var(--color-gray)]">
+                    Your conversation will appear here
+                  </p>
+                </div>
+              ) : (
+                <>
+                  {messages.map((message, index) => {
+                    const isAssistant = message.role === "assistant";
+                    return (
                       <div
-                        className={`max-w-[80%] sm:max-w-[70%] rounded-2xl px-4 py-2.5 ${
-                          isAssistant
-                            ? 'bg-[var(--color-green-light)] text-[var(--color-gold-lighter)] rounded-tl-sm'
-                            : 'bg-[var(--color-green-dark)] text-[var(--color-gold-lighter)] rounded-tr-sm'
-                        }`}
+                        key={index}
+                        className={`flex ${isAssistant ? "justify-start" : "justify-end"}`}
                       >
-                        <p
-                          className={`text-[10px] sm:text-xs font-semibold mb-1 ${
-                            isAssistant ? 'text-[var(--color-gold-light)]' : 'text-[var(--color-gold-light)]'
+                        <div
+                          className={`max-w-[80%] sm:max-w-[70%] rounded-2xl px-4 py-2.5 ${
+                            isAssistant
+                              ? "bg-[var(--color-green-light)] text-[var(--color-gold-lighter)] rounded-tl-sm"
+                              : "bg-[var(--color-green-dark)] text-[var(--color-gold-lighter)] rounded-tr-sm"
                           }`}
                         >
-                          {isAssistant ? firstName : 'You'}
-                        </p>
-                        <p className="text-sm sm:text-base leading-relaxed">
-                          {message.content}
-                        </p>
+                          <p
+                            className={`text-[10px] sm:text-xs font-semibold mb-1 ${
+                              isAssistant
+                                ? "text-[var(--color-gold-light)]"
+                                : "text-[var(--color-gold-light)]"
+                            }`}
+                          >
+                            {isAssistant ? firstName : "You"}
+                          </p>
+                          <p className="text-sm sm:text-base leading-relaxed">
+                            {message.content}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  )
-                })}
-                <div ref={transcriptEndRef} />
-              </>
-            )}
-          </div>
-        </section>
+                    );
+                  })}
+                  <div ref={transcriptEndRef} />
+                </>
+              )}
+            </div>
+          </section>
+        )}
       </div>
     </section>
-  )
+  );
 }
 
 export default AiAssistantComp

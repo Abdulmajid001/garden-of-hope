@@ -1,6 +1,6 @@
-import { signInActionAcc } from "@/app/_lib/actions";
 import Image from "next/image";
 import SignInAndOutButton from "../_components/SignInAndOutButton";
+import { signInActionAcc } from "../_lib/actions";
 
 export default function Page() {
   return (
