@@ -1,11 +1,11 @@
 "use client";
 
-import { useReservation } from "@/app/_context/ReservationContext";
 import { differenceInDays, format } from "date-fns";
 import { HiArrowRight} from "react-icons/hi";
 
 import UpdateButton from "./UpdateButton";
 import { createReservation } from "../_lib/actions";
+import { useReservation } from "../_context/ReservationContext";
 
 
 function ReservationForm({room}) {
