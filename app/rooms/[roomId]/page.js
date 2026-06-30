@@ -1,7 +1,5 @@
-// import { getCachedRoom } from "@/app/_lib/apiRooms";
-// import ReserveRoomComp from "@/app/_components/ReserveRoomComp";
-import { getCachedRoom } from "@/app/_lib/apiRooms";
-import ReserveRoomComp from "@/app/_components/ReserveRoomComp";
+import { getCachedRoom } from "../../_lib/apiRooms";
+import ReserveRoomComp from "../../_components/ReserveRoomComp";
 import Image from "next/image";
 import { HiWifi, HiOutlineClock, HiOutlineSparkles } from "react-icons/hi";
 import { FaParking, FaUtensils, FaSpa, FaBath, FaBed } from "react-icons/fa";

@@ -1,9 +1,20 @@
 import Image from "next/image";
-import {  getCachedHall } from "@/app/_lib/apiHalls";
-import { HiMapPin, HiUsers, HiOutlineEyeSlash, HiGiftTop, HiFilm } from "react-icons/hi2";
-import { FaCouch, FaToiletPaperSlash, FaGlassCheers, FaShieldAlt } from "react-icons/fa";
-import ReserveHallComp from "@/app/_components/ReserveHallComp";
-import { auth } from "@/app/_lib/auth";
+import { getCachedHall } from "../../_lib/apiHalls";
+import {
+  HiMapPin,
+  HiUsers,
+  HiOutlineEyeSlash,
+  HiGiftTop,
+  HiFilm,
+} from "react-icons/hi2";
+import {
+  FaCouch,
+  FaToiletPaperSlash,
+  FaGlassCheers,
+  FaShieldAlt,
+} from "react-icons/fa";
+import ReserveHallComp from "../../_components/ReserveHallComp";
+import { auth } from "../../_lib/auth";
 
 export async function generateMetadata({ params }) {
   const { hallId } = await params;
