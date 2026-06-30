@@ -20,11 +20,10 @@ const CallStatus = {
   FINISHED: "FINISHED",
 };
 
-const subject = "maths";
-const topic = "Integration";
+// const subject = "maths";
+// const topic = "Integration";
 const style = "casual";
 const voice = "female";
-const name = "Abdulmajid Hope";
 
 const AiAssistantComp = () => {
   const [callStatus, setCallStatus] = useState(CallStatus.INACTIVE);
@@ -89,7 +88,8 @@ const AiAssistantComp = () => {
   const handleCall = async () => {
     setCallStatus(CallStatus.CONNECTING);
     const assistantOverrides = {
-      variableValues: { subject, topic, style },
+      //   variableValues: { subject, topic, style },
+        variableValues: { style },
       clientMessages: ["transcript"],
       serverMessages: [],
     };
